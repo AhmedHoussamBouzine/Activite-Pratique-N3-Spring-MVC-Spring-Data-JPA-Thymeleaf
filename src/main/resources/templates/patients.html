@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="template1">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Patient</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css" >
 </head>
 <body>
-<div layout:fragment ="content1">
+<div>
     <div class="p-3 m-3">
         <div class = "card">
             <div class="card-header">
@@ -14,7 +15,7 @@
             <div class="card-body">
                 <form class="form-check-inline m-1" th:action="@{/user/index}" >
                     <label>keyword</label>
-                    <input type="text" name = "keyword" th:value="${keyword}"/>
+                    <input class="form-control" type="text" name = "keyword" th:value="${keyword}"/>
                     <button class="btn btn-outline-info">Search</button>
                 </form>
             </div>

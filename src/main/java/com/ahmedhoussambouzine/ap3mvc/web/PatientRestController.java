@@ -18,10 +18,9 @@ public class PatientRestController {
     @Autowired
     private PatientRepository patientRepository;
     @GetMapping(path = "/index")
-    public String index(Model model, @RequestParam(name = "page",defaultValue = "0") int  page,
-                        @RequestParam(name = "size",defaultValue = "5") int size,
-                        @RequestParam(name = "keyword",defaultValue = "") String keyword) {
-        Page<Patient> pagePatients = patientRepository.findByNomContains(keyword, PageRequest.of(page,size));
+    public String index(Model model) {
+        List<Patient> patientList = patientRepository.findAll();
+        model.addAttribute("patients", patientList);
         return "patients";
     }
     @GetMapping(path = "/deletePatient")
