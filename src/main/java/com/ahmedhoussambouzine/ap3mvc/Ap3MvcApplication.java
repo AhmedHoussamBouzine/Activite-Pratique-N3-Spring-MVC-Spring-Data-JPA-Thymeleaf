@@ -19,9 +19,9 @@ public class Ap3MvcApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        patientRepository.save(new Patient(null, "Houssam", "Bouzine", new Date(), true, 10));
-        patientRepository.save(new Patient(null, "Ahmed", "Bouzine",new Date(), false, 20));
-        patientRepository.save(new Patient(null, "Bouzine","Bouzine", new Date(), true, 30));
+        patientRepository.save(new Patient(null, "Houssam", "Bouzine", new Date(), true, 310));
+        patientRepository.save(new Patient(null, "Ahmed", "Bouzine",new Date(), false, 230));
+        patientRepository.save(new Patient(null, "Bouzine","Bouzine", new Date(), true, 330));
 
     }
 }

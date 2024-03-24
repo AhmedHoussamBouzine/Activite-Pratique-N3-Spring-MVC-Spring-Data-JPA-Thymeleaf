@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface PatientRepository extends JpaRepository<Patient, Long> {
-    List<Patient> findByNomContains(String nom, Pageable pageable);
+    Page<Patient> findByNomContains(String nom, Pageable pageable);
     Patient findByNom(String nom);
     @Query("select p from Patient p where p.id = :id")
     Patient search(@Param("id")long id);
